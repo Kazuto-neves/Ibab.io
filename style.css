@@ -1,22 +1,134 @@
-/* Bkids letras coloridas por tema */
-.bkids-b { color: #e17055; }
-.bkids-k { color: #00b894; }
-.bkids-i { color: #0984e3; }
-.bkids-d { color: #fdcb6e; }
-.bkids-s { color: #6c5ce7; }
-
-body:not(.dark-mode) .bkids-b { color: #d35400; }
-body:not(.dark-mode) .bkids-k { color: #009432; }
-body:not(.dark-mode) .bkids-i { color: #0652dd; }
-body:not(.dark-mode) .bkids-d { color: #f6e58d; }
-body:not(.dark-mode) .bkids-s { color: #4834d4; }
-body {
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-  margin: 0;
-  background: linear-gradient(135deg, #232526 0%, #222 100%);
-  color: #fff;
-  min-height: 100vh;
+/* Garante que o Bkids nunca recebe text-shadow herdado de h4 */
+.bkids-title {
+  text-shadow: none !important;
 }
+/* Dark/Light mode dynamic backgrounds and text */
+body {
+  transition: background 0.3s, color 0.3s;
+}
+body.dark-mode {
+  background: #181a20;
+  color: #fff;
+}
+body:not(.dark-mode) {
+  background: #fff;
+  color: #23272f;
+}
+header, section, .contacts-by-day, .dropdown-content, .dropdown-group, .dropdown-btn, .contact-card {
+  transition: background 0.3s, color 0.3s, box-shadow 0.3s, border 0.3s;
+}
+body.dark-mode header,
+body.dark-mode section,
+body.dark-mode .contacts-by-day,
+body.dark-mode .dropdown-content,
+body.dark-mode .dropdown-group,
+body.dark-mode .dropdown-btn,
+body.dark-mode .contact-card {
+  background: #181a20;
+  color: #fff;
+}
+body:not(.dark-mode) header,
+body:not(.dark-mode) section,
+body:not(.dark-mode) .contacts-by-day,
+body:not(.dark-mode) .dropdown-content,
+body:not(.dark-mode) .dropdown-group,
+body:not(.dark-mode) .dropdown-btn,
+body:not(.dark-mode) .contact-card {
+  background: #fff;
+  color: #23272f;
+}
+body.dark-mode .contact-card {
+  box-shadow: 0 2px 8px #1118;
+}
+body:not(.dark-mode) .contact-card {
+  box-shadow: 0 2px 8px #ccc8;
+}
+.body.dark-mode .dropdown-btn {
+  background: transparent;
+  color: #fff;
+  border: none;
+}
+body:not(.dark-mode) .dropdown-btn {
+  background: transparent;
+  color: #23272f;
+  border: none;
+}
+body.dark-mode h1, body.dark-mode h2, body.dark-mode h3 {
+  color: #fff;
+}
+body:not(.dark-mode) h1, body:not(.dark-mode) h2, body:not(.dark-mode) h3 {
+  color: #23272f;
+}
+body.dark-mode .fa-book-bible {
+  color: #fff;
+}
+body:not(.dark-mode) .fa-book-bible {
+  color: #23272f;
+}
+body.dark-mode .fa-location-dot,
+body.dark-mode .fa-clock {
+  color: #FFD43B;
+}
+body:not(.dark-mode) .fa-location-dot,
+body:not(.dark-mode) .fa-clock {
+  color: #23272f;
+}
+body .fa-whatsapp {
+  color: #63e6be;
+}
+body.dark-mode .fa-face-smile {
+  color: #ffd43b;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000;
+}
+body:not(.dark-mode) .fa-face-smile {
+  color: #ffd43b;
+  text-shadow: none;
+}
+body.dark-mode h4 {
+  color: #fff;
+}
+body:not(.dark-mode) h4 {
+  color: #23272f;
+}
+body.dark-mode h4.all-in,
+body.dark-mode h4.all-in .fa-face-smile {
+  color: #FFD43B !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000 !important;
+}
+body:not(.dark-mode) h4.all-in,
+body:not(.dark-mode) h4.all-in .fa-face-smile {
+  color: #FFD43B !important;
+  text-shadow: -1px -1px 0 #000, 1px -1px 0 #000, -1px 1px 0 #000, 1px 1px 0 #000 !important;
+}
+body .contact-card b,
+body .contact-card p,
+body .contact-card label,
+body .contact-card li {
+  transition: color 0.3s;
+}
+body.dark-mode .contact-card b,
+body.dark-mode .contact-card p,
+body.dark-mode .contact-card label,
+body.dark-mode .contact-card li {
+  color: #fff;
+}
+body:not(.dark-mode) .contact-card b,
+body:not(.dark-mode) .contact-card p,
+body:not(.dark-mode) .contact-card label,
+body:not(.dark-mode) .contact-card li {
+  color: #23272f;
+}
+/* Bkids letras coloridas por tema - sempre sobrepõe cor padrão de span */
+.bkids-b { color: #e17055 !important; }
+.bkids-k { color: #00b894 !important; }
+.bkids-i { color: #0984e3 !important; }
+.bkids-d { color: #fdcb6e !important; }
+.bkids-s { color: #6c5ce7 !important; }
+body:not(.dark-mode) .bkids-b { color: #d35400 !important; }
+body:not(.dark-mode) .bkids-k { color: #009432 !important; }
+body:not(.dark-mode) .bkids-i { color: #0652dd !important; }
+body:not(.dark-mode) .bkids-d { color: #f6e58d !important; }
+body:not(.dark-mode) .bkids-s { color: #4834d4 !important; }
 header {
   background: #222;
   color: #fff;
@@ -79,19 +191,19 @@ section {
 /* Dropdown PGs */
 /* Dropdown PGs */
 .dropdown-group {
-  margin-bottom: 1.2rem;
+  margin-bottom: 0;
   position: relative;
 }
 .dropdown-btn {
   width: 100%;
-  background: #222;
-  color: #fff;
-  border: 2px solid #1a4d8f;
+  background: transparent;
+  color: inherit;
+  border: none;
   outline: none;
   padding: 1rem 1.2rem;
   font-size: 1.1rem;
   text-align: left;
-  border-radius: 8px;
+  border-radius: 0;
   cursor: pointer;
   transition: background 0.2s, color 0.2s;
   display: flex;
@@ -99,27 +211,32 @@ section {
   justify-content: space-between;
   font-weight: 600;
   z-index: 2;
+  margin-bottom: 0;
 }
 .dropdown-btn:hover, .dropdown-group:hover .dropdown-btn, .dropdown-btn:focus {
-  background: #1a4d8f;
-  color: #fff;
+  background: #fff3;
+  color: #1a4d8f;
+  box-shadow: 0 4px 16px 0 #1a4d8f33, 0 1.5px 0 #1a4d8f;
+  transform: translateY(-2px) scale(1.03);
   border-color: #163a6b;
+  transition: box-shadow 0.2s, background 0.2s, color 0.2s, transform 0.2s;
 }
 .dropdown-btn i {
   margin-left: 0.7rem;
   transition: transform 0.2s;
 }
+/* Dropdown oculto por padrão, sem bordas */
 .dropdown-content {
-  background: #292d36;
-  border-radius: 0 0 14px 14px;
-  box-shadow: 0 4px 24px rgba(0,0,0,0.13);
-  padding: 1.5rem 1.5rem 1.2rem 1.5rem;
-  margin-top: -0.2rem;
+  background: transparent;
+  border-radius: 0;
+  box-shadow: none;
+  padding: 0;
+  margin-top: 0;
   display: none;
   position: absolute;
   left: 0;
   right: 0;
-  border: 1px solid #31343b;
+  border: none;
   gap: 1.5rem;
   flex-wrap: wrap;
   justify-content: flex-start;
@@ -132,16 +249,35 @@ section {
 .dropdown-content .contact-card {
   background: #f7f8fa;
   color: #23272f;
-  border: 1px solid #e0e3e8;
-  margin-bottom: 0;
-  margin-right: 0;
-  min-width: 220px;
-  max-width: 320px;
-  flex: 1 1 220px;
+  border: none;
+  margin: 0;
+  margin-bottom: 0.7rem;
+  min-width: 0;
+  max-width: none;
+  width: 100%;
+  flex: 1 1 100%;
   box-shadow: 0 2px 8px rgba(0,0,0,0.06);
   transition: transform 0.15s, box-shadow 0.15s;
-  margin-left: 0.7rem;
-  margin-top: 0.7rem;
+  position: relative;
+}
+.dropdown-content .contact-card:not(:last-child)::after {
+  content: '';
+  display: block;
+  position: absolute;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  height: 2px;
+  background: #e0e3e8;
+  opacity: 1;
+  transition: opacity 0.3s, background 0.3s;
+}
+.dropdown-content .contact-card:hover:not(:last-child)::after {
+  opacity: 0.3;
+  background: #1a4d8f33;
+}
+.dropdown-content .contact-card:last-child {
+  margin-bottom: 0;
 }
 .dropdown-content .contact-card h4 {
   color: #1a4d8f;
